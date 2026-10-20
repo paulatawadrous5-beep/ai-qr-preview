@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Wi-Fi QR Code Generator — Share Wi-Fi With One Scan | Smart QR</title>
+  <meta name="description" content="Generate a free QR code for your Wi-Fi network. Guests join with one scan — no typing long passwords. Works for home, cafe, Airbnb and office. No sign-up, private, print-ready.">
+  <link rel="canonical" href="https://smartqrgo.com/wifi-qr-code-generator.html">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Smart QR">
+  <meta property="og:title" content="Free Wi-Fi QR Code Generator — Share Wi-Fi With One Scan">
+  <meta property="og:description" content="Build a QR code for your Wi-Fi network below, then design it beautifully with Smart QR. Guests join with one scan — no passwords to spell out.">
+  <meta property="og:url" content="https://smartqrgo.com/wifi-qr-code-generator.html">
+  <meta property="og:image" content="https://smartqrgo.com/assets/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Wi-Fi QR Code Generator — Share Wi-Fi With One Scan">
+  <meta name="twitter:description" content="Guests join your Wi-Fi with one scan. Free builder + designer QR codes, no sign-up.">
+  <meta name="twitter:image" content="https://smartqrgo.com/assets/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I create a QR code for my Wi-Fi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Enter your network name (SSID), security type and password in the builder above, copy the generated Wi-Fi code, then paste it into Smart QR's generator to design and download your QR code. Print it and guests join your network by scanning — no typing needed." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is sharing my Wi-Fi with a QR code safe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — a Wi-Fi QR code contains exactly the same credentials you would read out loud. Anyone who can physically see the printed code could already ask you for the password. For extra safety, share a guest network instead of your main one." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Wi-Fi QR codes work on iPhone and Android?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both iPhone (iOS 11 and later) and Android (10 and later) join Wi-Fi networks directly from the camera app when they scan a Wi-Fi QR code. Older Android phones may need a QR scanner app." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my network name or password has special characters?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The builder above escapes special characters (such as ; : , \" and \\) automatically, so your QR code works even with tricky passwords. Copy the generated string exactly as shown." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this Wi-Fi QR code generator free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Building the Wi-Fi code and designing the QR code with Smart QR — including high-resolution PNG and SVG downloads — is completely free with no account required." }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+    .article-hero { text-align: center; margin-bottom: 28px; }
+    .article-hero h1 { font-size: 2rem; line-height: 1.25; margin-bottom: 12px; }
+    .article-hero p.lead { color: var(--text-muted); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+    .crumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; }
+    .crumbs a { color: var(--primary); text-decoration: none; }
+    .builder-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 24px; margin: 28px 0; }
+    .builder-card h2 { margin-bottom: 16px; font-size: 1.25rem; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; }
+    .field input[type="text"], .field select { width: 100%; padding: 10px 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-app); color: var(--text-main); font-size: 1rem; }
+    .check-row { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+    .wifi-output { width: 100%; min-height: 64px; padding: 12px; border: 1px dashed var(--border-color); border-radius: var(--radius-sm); background: var(--bg-surface-subtle); color: var(--text-main); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.85rem; word-break: break-all; margin: 14px 0; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-primary, .btn-secondary { display: inline-block; padding: 10px 18px; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; text-decoration: none; cursor: pointer; border: none; }
+    .btn-primary { background: var(--primary); color: var(--primary-text); }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: var(--bg-surface-subtle); color: var(--text-main); border: 1px solid var(--border-color); }
+    .article-body h2 { margin: 36px 0 12px; font-size: 1.4rem; }
+    .article-body h3 { margin: 22px 0 8px; font-size: 1.1rem; }
+    .article-body p, .article-body li { color: var(--text-main); margin-bottom: 10px; }
+    .article-body ul, .article-body ol { padding-left: 22px; }
+    .article-body li { margin-bottom: 8px; }
+    .tip-box { background: var(--success-bg); border: 1px solid var(--success); border-radius: var(--radius-md); padding: 14px 16px; margin: 20px 0; font-size: 0.95rem; }
+    .faq-list details { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 10px; }
+    .faq-list summary { font-weight: 600; cursor: pointer; }
+    .faq-list details p { color: var(--text-muted); margin-top: 8px; }
+    .cta-band { text-align: center; background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px 20px; margin-top: 40px; }
+    .cta-band h2 { margin-bottom: 10px; }
+    .cta-band p { color: var(--text-muted); margin-bottom: 16px; }
+    .related { margin-top: 36px; }
+    .related a { color: var(--primary); }
+    .back-link { display: inline-block; margin-bottom: 8px; color: var(--primary); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-container">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+          <circle cx="17.5" cy="17.5" r="2.5"></circle>
+        </svg>
+      </div>
+      <div>
+        <h1 class="brand-title">Smart QR</h1>
+        <p class="brand-subtitle">Context-Aware Adaptive QR Design</p>
+      </div>
+    </div>
+    <div class="theme-switch-group">
+      <a class="btn-secondary" href="index.html" style="text-decoration:none;">Open the QR Studio</a>
+    </div>
+  </header>
+
+  <main class="article-wrap">
+    <nav class="crumbs"><a href="index.html">Smart QR</a> &rsaquo; Wi-Fi QR Code Generator</nav>
+
+    <div class="article-hero">
+      <h1>Free Wi-Fi QR Code Generator</h1>
+      <p class="lead">Stop spelling out your password letter by letter. Build a QR code for your Wi-Fi below — guests join your network with one scan.</p>
+    </div>
+
+    <div class="builder-card" id="wifiBuilder">
+      <h2>Build your Wi-Fi code</h2>
+      <div class="field">
+        <label for="wifiSsid">Network name (SSID)</label>
+        <input type="text" id="wifiSsid" placeholder="e.g. MyCafe_WiFi" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="field">
+        <label for="wifiSec">Security type</label>
+        <select id="wifiSec">
+          <option value="WPA">WPA / WPA2 / WPA3 (most common)</option>
+          <option value="WEP">WEP (old routers)</option>
+          <option value="nopass">No password (open network)</option>
+        </select>
+      </div>
+      <div class="field" id="wifiPassField">
+        <label for="wifiPass">Wi-Fi password</label>
+        <input type="text" id="wifiPass" placeholder="Your Wi-Fi password" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="field check-row">
+        <input type="checkbox" id="wifiHidden">
+        <label for="wifiHidden" style="margin:0;">Hidden network (SSID not broadcast)</label>
+      </div>
+      <div class="wifi-output" id="wifiOutput" aria-live="polite">WIFI:T:WPA;S:;P:;;</div>
+      <div class="btn-row">
+        <button class="btn-primary" id="wifiCopyBtn" type="button">Copy Wi-Fi code</button>
+        <a class="btn-secondary" href="index.html">Design it in Smart QR &rarr;</a>
+      </div>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-top:12px;">Next: copy the code above, paste it into Smart QR's generator as your content, and download a beautiful, scan-safe QR code.</p>
+    </div>
+
+    <div class="article-body">
+      <h2>How to make a QR code for Wi-Fi in 3 steps</h2>
+      <ol>
+        <li><strong>Build the Wi-Fi code</strong> — enter your network name, security type and password in the builder above. It produces the standard <code>WIFI:</code> format every phone understands, with special characters escaped automatically.</li>
+        <li><strong>Design it in Smart QR</strong> — paste the copied code into the <a href="index.html">Smart QR studio</a> as your content. Pick a preset or hit Smart Design, add your logo or brand colors, and every code is scan-safety checked before download.</li>
+        <li><strong>Print and place it</strong> — download a crisp PNG or vector SVG and print it for your counter, table tents, Airbnb welcome book or office wall. Guests point their camera and join — no app needed on modern phones.</li>
+      </ol>
+
+      <h2>Where a Wi-Fi QR code pays off</h2>
+      <ul>
+        <li><strong>Cafes &amp; restaurants</strong> — one framed code on the counter ends the "what's the Wi-Fi password?" question forever.</li>
+        <li><strong>Airbnb &amp; rentals</strong> — put it in the welcome book; guests connect the second they walk in.</li>
+        <li><strong>Offices &amp; waiting rooms</strong> — visitors join the guest network without bothering reception.</li>
+        <li><strong>Events</strong> — add it to badges or signage so attendees are online instantly.</li>
+        <li><strong>Home</strong> — stick one on the fridge for visitors instead of dictating a 20-character password.</li>
+      </ul>
+
+      <h2>Security tips (worth 30 seconds)</h2>
+      <ul>
+        <li><strong>Share a guest network</strong>, not your main one, when the code will be visible to strangers. Most routers can run both.</li>
+        <li>A Wi-Fi QR code holds the same password you'd say out loud — it doesn't make your network less secure, it just makes joining easier.</li>
+        <li>Use WPA2 or WPA3 security; avoid WEP — it's broken and most new devices won't connect to it.</li>
+        <li>If you change the password, you'll need to reprint the code — so pick a strong password you won't need to change.</li>
+      </ul>
+
+      <div class="tip-box"><strong>Tip:</strong> iPhones (iOS 11+) and Android phones (10+) join Wi-Fi straight from the camera app. On older Android, any free QR scanner app works.</div>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details>
+          <summary>How do I create a QR code for my Wi-Fi?</summary>
+          <p>Enter your network name (SSID), security type and password in the builder above, copy the generated Wi-Fi code, then paste it into Smart QR's generator to design and download your QR code. Print it and guests join your network by scanning — no typing needed.</p>
+        </details>
+        <details>
+          <summary>Is sharing my Wi-Fi with a QR code safe?</summary>
+          <p>Yes — a Wi-Fi QR code contains exactly the same credentials you would read out loud. Anyone who can physically see the printed code could already ask you for the password. For extra safety, share a guest network instead of your main one.</p>
+        </details>
+        <details>
+          <summary>Do Wi-Fi QR codes work on iPhone and Android?</summary>
+          <p>Yes. Both iPhone (iOS 11 and later) and Android (10 and later) join Wi-Fi networks directly from the camera app when they scan a Wi-Fi QR code. Older Android phones may need a QR scanner app.</p>
+        </details>
+        <details>
+          <summary>What if my network name or password has special characters?</summary>
+          <p>The builder above escapes special characters (such as ; : , " and \) automatically, so your QR code works even with tricky passwords. Copy the generated string exactly as shown.</p>
+        </details>
+        <details>
+          <summary>Is this Wi-Fi QR code generator free?</summary>
+          <p>Yes. Building the Wi-Fi code and designing the QR code with Smart QR — including high-resolution PNG and SVG downloads — is completely free with no account required.</p>
+        </details>
+      </div>
+
+      <div class="cta-band">
+        <h2>Turn it into a designer QR code</h2>
+        <p>Paste your Wi-Fi code into Smart QR, add your logo and brand colors, and download a print-ready code — free, private, no sign-up.</p>
+        <a class="btn-primary" href="index.html">Open the free QR Studio</a>
+      </div>
+
+      <div class="related">
+        <h3>Related guides</h3>
+        <ul>
+          <li><a href="qr-code-restaurant-menu.html">QR Code for Restaurant Menu — free generator &amp; printing guide</a></li>
+          <li><a href="index.html">Smart QR Studio — free smart QR code generator</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p>Smart QR Studio &copy; 2026 &bull; Private, Client-Safe & Scan-Engine Validated</p>
+  </footer>
+
+  <script>
+    (function () {
+      var ssidEl = document.getElementById('wifiSsid');
+      var secEl = document.getElementById('wifiSec');
+      var passEl = document.getElementById('wifiPass');
+      var passField = document.getElementById('wifiPassField');
+      var hiddenEl = document.getElementById('wifiHidden');
+      var outEl = document.getElementById('wifiOutput');
+      var copyBtn = document.getElementById('wifiCopyBtn');
+
+      function esc(s) {
+        return String(s).replace(/([\\;,:"])/g, '\\$1');
+      }
+
+      function build() {
+        var sec = secEl.value;
+        var ssid = esc(ssidEl.value.trim());
+        var parts = ['WIFI:', 'T:' + sec, ';S:' + ssid + ';'];
+        if (sec !== 'nopass') {
+          parts.push('P:' + esc(passEl.value) + ';');
+        }
+        if (hiddenEl.checked) {
+          parts.push('H:true;');
+        }
+        parts.push(';');
+        var code = parts.join('');
+        outEl.textContent = code;
+        passField.style.display = sec === 'nopass' ? 'none' : '';
+        return code;
+      }
+
+      [ssidEl, secEl, passEl, hiddenEl].forEach(function (el) {
+        el.addEventListener('input', build);
+        el.addEventListener('change', build);
+      });
+
+      copyBtn.addEventListener('click', function () {
+        var code = build();
+        function done() {
+          copyBtn.textContent = 'Copied!';
+          setTimeout(function () { copyBtn.textContent = 'Copy Wi-Fi code'; }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(done, function () { fallback(); });
+        } else {
+          fallback();
+        }
+        function fallback() {
+          var ta = document.createElement('textarea');
+          ta.value = code;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+          done();
+        }
+      });
+
+      build();
+    })();
+  </script>
+</body>
+</html>
